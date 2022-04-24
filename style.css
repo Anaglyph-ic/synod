@@ -6,7 +6,7 @@ body {
 }
 
 .cell{
-  border: 1px solid cyan;
+  border: 1px solid red;
   padding: 5px;
   margin: 5px;
 }
@@ -16,7 +16,7 @@ body {
 }
 
 .observablehq:hover{
-  border: 1px dashed red;
+  border: 1px dashed cyan;
 }
 
 .btn{
@@ -35,5 +35,5 @@ body {
 }
 
 .hovbut:hover{
-  border: 1px dashed red;
+  border: 1px dashed cyan;
 }
