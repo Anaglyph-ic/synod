@@ -2,10 +2,10 @@
   <link href="/style.css" rel="stylesheet">
 </head>
 <body>
-  
+ <div class="cell">
 <div id="observablehq-viewof-mainTable-0d0ed783"></div>
 <div id="observablehq-viewof-search-0d0ed783"></div>
-<p>Credit: <a href="https://observablehq.com/@anaglyph-ic/synod-main-table">Synod Main Table by Anaglyphic</a></p>
+  </div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -14,5 +14,6 @@ new Runtime().module(define, name => {
   if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-0d0ed783"));
   if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-0d0ed783"));
 });
+
 </script>
 </body>
