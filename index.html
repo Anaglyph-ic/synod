@@ -1,30 +1,17 @@
 <body>
-<div id="observablehq-viewof-mainTable-d36fb7aa"></div>
-<div id="observablehq-viewof-search-d36fb7aa"></div>
-   <div id="observablehq-viewof-search-146573d0"></div>
-
+   <div id="observablehq-viewof-mainTable-12ed96d4"></div>
+<div id="observablehq-viewof-search-12ed96d4"></div>
+<p>Credit: <a href="https://observablehq.com/@anaglyph-ic/synod-main-table">Synod Main Table by Anaglyphic</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/b64751dcf2980491@113.js?v=3";
-   
-  const notebookModule = (new Runtime).module(define, name => {
-  if (name === "table") return Inspector.into(document.querySelector("#observablehq-table-146573d0"))();
+import define from "https://api.observablehq.com/d/b64751dcf2980491.js?v=3";
+new Runtime().module(define, name => {
+   setTimeout(()=>{
+      console.log("trigger")
+            if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-12ed96d4"));
+            if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-12ed96d4"));
+      },15000)
 });
-  
-   
-  
-  
-  notebookModule.value("table").then(chart => {
- 
-     console.log(table)
-     
-     new Runtime().module(define, name => {
-  if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-d36fb7aa"));
-  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-d36fb7aa"));
-});
-
-})
-  
 </script>
 </body>
