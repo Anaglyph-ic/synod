@@ -17,3 +17,11 @@ body {
 .observablehq:hover{
   border: 1px dashed cyan;
 }
+
+.btn{
+  cursor:pointer;
+  width: 34px;
+  height: 34px;
+  margin: 3px;
+  
+}
