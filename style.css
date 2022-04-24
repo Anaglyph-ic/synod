@@ -27,3 +27,11 @@ body {
   font-weight: bolder;
   text-align:center
 }
+
+.hov{
+  border: 1px solid white;
+}
+
+.hov:hover{
+  border: 1px dashed cyan;
+}
