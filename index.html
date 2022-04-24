@@ -1,6 +1,7 @@
 <body>
-<div id="observablehq-viewof-mainTable-144c66ac"></div>
-<div id="observablehq-viewof-search-144c66ac"></div>
+<div id="observablehq-viewof-mainTable-d36fb7aa"></div>
+<div id="observablehq-viewof-search-d36fb7aa"></div>
+   <div id="observablehq-viewof-search-146573d0"></div>
 
 
 <script type="module">
@@ -8,18 +9,21 @@ import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/run
 import define from "https://api.observablehq.com/d/b64751dcf2980491@113.js?v=3";
    
   const notebookModule = (new Runtime).module(define, name => {
-  if (name === "viewof mainTable") return Inspector.into(document.querySelector("#observablehq-viewof-mainTable-144c66ac"))();
-  if (name === "viewof search") return Inspector.into(document.querySelector("#observablehq-viewof-search-144c66ac"))();
   if (name === "table") return Inspector.into(document.querySelector("#observablehq-table-146573d0"))();
-  
 });
   
    
   
   
   notebookModule.value("table").then(chart => {
-  // Then runs when the "chart"` cell has been fulfilled and is already mounted to the DOM
-console.log(table)
+ 
+     console.log(table)
+     
+     new Runtime().module(define, name => {
+  if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-d36fb7aa"));
+  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-d36fb7aa"));
+});
+
 })
   
 </script>
