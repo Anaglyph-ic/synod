@@ -5,8 +5,8 @@
 </head>
 <body>
   <div id="menu">
-   <div id="affilForceBtn"  class="cell">Force</div>
-    <div id="ownerTableBtn"  class="cell">Table</div>
+   <div id="affilForceBtn"  class="cell btn">Force</div>
+    <div id="ownerTableBtn"  class="cell btn">Table</div>
   </div>
   <div id="content">
    <div id="affilForce" class="cell">
@@ -27,6 +27,37 @@ new Runtime().module(define, name => {
   if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-0d0ed783"));
    if (name === "force") return new Inspector(document.querySelector("#observablehq-force-b366c768"));
 });
+  
+  
+  // Manage Buttons
+  const visibility = {
+    force:true,
+    table:true
+  }
+  
+  const forceDiv = document.getElementById("affilForceBtn");
+  
+  forceDiv.addEventListener("click",()=>{
+    if (visibility.force){
+      forceDiv.style.display="none";
+      visibility.force=false;
+    }else{
+      forceDiv.style.display="block";
+      visibility.force=true;
+    }
+  })
+  
+    const tableDiv = document.getElementById("ownerTable");
+  
+  tableDiv.addEventListener("click",()=>{
+    if (visibility.table){
+      tableDiv.style.display="none";
+      visibility.table=false;
+    }else{
+      tableDiv.style.display="block";
+      visibility.table=true;
+    }
+  })
 
 </script>
 </body>
