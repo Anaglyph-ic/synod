@@ -7,6 +7,10 @@ font-family:sans-serif
   padding: 5px;
 }
 
+.observablehq{
+ border: 1px solid white;
+}
+
 .observablehq:hover{
   border: 1px dashed cyan;
 }
