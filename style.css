@@ -28,10 +28,10 @@ body {
   text-align:center
 }
 
-.hov{
+.hovbut{
   border: 1px solid white;
 }
 
-.hov:hover{
+.hovbut:hover{
   border: 1px dashed cyan;
 }
