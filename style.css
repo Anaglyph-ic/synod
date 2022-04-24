@@ -7,6 +7,6 @@ font-family:sans-serif
   padding: 5px;
 }
 
-.observablehq::hover{
-  border: 1px solid cyan;
+.observablehq:hover{
+  border: 1px dashed cyan;
 }
