@@ -25,7 +25,8 @@ body {
   height: 40px;
   margin: 5px;
   font-weight: bolder;
-  text-align:center
+  text-align:center;
+  user-select:none;
 }
 
 .hovbut{
