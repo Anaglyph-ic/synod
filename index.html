@@ -21,8 +21,10 @@
       </div>
 
   <div id="colright">
-     <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
-    </div>
+     <div id="affilStacked" class="cell">
+       <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
+     </div>
+  </div>
   
 
 <script type="module">
@@ -35,14 +37,19 @@ new Runtime().module(define, name => {
   if (name === "force") return new Inspector(document.querySelector("#observablehq-force-9c49a5ef"));
   return ["nodes","links"].includes(name);
 });
-</script>
+
+  //open docs
   
+document.getElementById("docBtn").addEventListener("click",()=>{
+  window.open("https://observablehq.com/collection/@anaglyph-ic/anaglyphism-the-anaver-se-governance-system", '_blank').focus();
+})
   
   
   // Manage Buttons
   const visibility = {
     force:true,
-    table:true
+    table:true,
+    stacked:true,
   }
   
   const forceBtn = document.getElementById("affilForceBtn");
@@ -72,5 +79,21 @@ new Runtime().module(define, name => {
     }
   })
 
+  
+   const stackedBtn = document.getElementById("ownerTableBtn");
+   const stackedDiv = document.getElementById("ownerTable");
+  
+  stackedBtn.addEventListener("click",()=>{
+    if (visibility.table){
+      stackedDiv.style.display="none";
+      visibility.stacked=false;
+    }else{
+      stackedDiv.style.display="block";
+      visibility.stacked=true;
+    }
+  })
+  
+  
+  
 </script>
 </body>
