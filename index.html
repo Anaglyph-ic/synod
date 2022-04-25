@@ -8,7 +8,8 @@
   
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Force<br>网络图</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>代理<br>名单</div></div>
-    <div id="docBtn"  class="cell btn"><div class="hovbut">Documentation<br>技术<br>文档</div></div>
+    <div id="stackedBtn"  class="cell btn"><div class="hovbut">Stacked<br>堆积图</div></div>
+    <div id="docBtn"  class="cell btn"><div class="hovbut">Docs<br>技术<br>文档</div></div>
   </div>
   <div id="content">
    <div id="affilForce" class="cell">
@@ -80,8 +81,8 @@ document.getElementById("docBtn").addEventListener("click",()=>{
   })
 
   
-   const stackedBtn = document.getElementById("ownerTableBtn");
-   const stackedDiv = document.getElementById("ownerTable");
+   const stackedBtn = document.getElementById("stackedBtn");
+   const stackedDiv = document.getElementById("affilStacked");
   
   stackedBtn.addEventListener("click",()=>{
     if (visibility.table){
