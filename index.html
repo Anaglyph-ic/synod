@@ -64,9 +64,11 @@ document.getElementById("synod").addEventListener("click",()=>{
     if (visibility.force){
       forceDiv.style.display="none";
       visibility.force=false;
+      forceBtn.style.opacity=.4;
     }else{
       forceDiv.style.display="block";
       visibility.force=true;
+      forceBtn.style.opacity=1;
     }
   })
   
@@ -78,9 +80,11 @@ document.getElementById("synod").addEventListener("click",()=>{
     if (visibility.table){
       tableDiv.style.display="none";
       visibility.table=false;
+      ownerTableBtn.style.opacity=.4;
     }else{
       tableDiv.style.display="block";
       visibility.table=true;
+      ownerTableBtn.style.opacity=1;
     }
   })
 
@@ -92,9 +96,11 @@ document.getElementById("synod").addEventListener("click",()=>{
     if (visibility.stacked){
       stackedDiv.style.display="none";
       visibility.stacked=false;
+      stackedBtn.style.opacity=.4;
     }else{
       stackedDiv.style.display="block";
       visibility.stacked=true;
+      stackedBtn.style.opacity=1;
     }
   })
   
