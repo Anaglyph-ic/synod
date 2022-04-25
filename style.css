@@ -37,3 +37,11 @@ body {
 .hovbut:hover{
   border: 1px dashed cyan;
 }
+
+.observable--running{
+  cursor:progress;
+}
+
+form.oi-ec050e-table{
+  margin:0 !important;
+}
