@@ -68,3 +68,13 @@ form.oi-ec050e-table{
   background:cyan;
   color:red;
 }
+
+tr{
+  vertical-align: top !important;
+}
+
+td{
+  list-style-type: none !important;
+}
+
+
