@@ -11,27 +11,31 @@
   </div>
   <div id="content">
    <div id="affilForce" class="cell">
-  <div id="observablehq-force-b366c768">Loading affiliation force graph...</div>
+    <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
      </div>
  <div id="ownerTable" class="cell">
-      <div id="observablehq-viewof-search-0d0ed783"></div>
-<div id="observablehq-viewof-mainTable-0d0ed783">Loading glyph power data table...</div>
+ <div id="observablehq-viewof-search-9c49a5ef"></div>
+<div id="observablehq-viewof-mainTable-9c49a5ef">Loading owner table...</div>
   </div>
       </div>
 
   <div id="colright">
-    <div id="observablehq-chartStacked-fb19551c"></div>
+     <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
     </div>
   
+
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/b64751dcf2980491.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-0d0ed783"));
-  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-0d0ed783"));
-   if (name === "force") return new Inspector(document.querySelector("#observablehq-force-b366c768"));
-   if (name === "chartStacked") return new Inspector(document.querySelector("#observablehq-chartStacked-fb19551c"));
+  if (name === "chartStacked") return new Inspector(document.querySelector("#observablehq-chartStacked-9c49a5ef"));
+  if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-9c49a5ef"));
+  if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-9c49a5ef"));
+  if (name === "force") return new Inspector(document.querySelector("#observablehq-force-9c49a5ef"));
+  return ["nodes","links"].includes(name);
 });
+</script>
+  
   
   
   // Manage Buttons
