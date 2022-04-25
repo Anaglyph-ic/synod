@@ -46,6 +46,9 @@ body {
 
 form.oi-ec050e-table{
   margin:0 !important;
+  height:500px !important;
+  min-height:450px !important;
+  max-height:550px !important;
 }
 
 #synod{
