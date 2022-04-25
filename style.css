@@ -51,4 +51,11 @@ form.oi-ec050e-table{
 #synod{
   background:red;
   color:cyan;
+  cursor:pointer;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-weight: bolder;
+  text-align:center;
+  user-select:none;
 }
