@@ -34,8 +34,10 @@ body {
   border: 1px solid white;
   width:38px;
   height:38px;
-  line-height: 115%;
-  
+  line-height: 140%;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hovbut:hover{
@@ -64,6 +66,9 @@ form.oi-ec050e-table{
   text-align:center;
   user-select:none;
       padding: 6px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #synod:hover{
