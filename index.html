@@ -12,6 +12,7 @@
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Web<br>网络</div></div>
      <div id="mapBtn"  class="cell btn"><div class="hovbut">Map<br>地图</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>名单</div></div>
+        <div id="marketBtn"  class="cell btn"><div class="hovbut">Market<br>市场</div></div>
     <div id="stackedBtn"  class="cell btn"><div class="hovbut">Stack<br>堆栈</div></div>
     <div id="docBtn"  class="cell btn"><div class="hovbut">Docs<br>文档</div></div>
   </div>
@@ -27,6 +28,9 @@
  <div id="ownerTable" class="cell">
  <div id="observablehq-viewof-search-9c49a5ef"></div>
 <div id="observablehq-viewof-mainTable-9c49a5ef">Loading owner table...</div>
+  </div>
+    <div id="marketDiv" class="cell">
+<div id="observablehq-viewof-marketTable-71581602">Loading market table...</div>
   </div>
       </div>
 
@@ -51,6 +55,7 @@ new Runtime().module(define, name => {
   if (name === "territory") return new Inspector(document.querySelector("#observablehq-territory-9f356331"));
   if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-9f356331"));
   if (name === "tokenTooltip") return new Inspector(document.querySelector("#observablehq-tokenTooltip-2dce2ada"));
+   if (name === "viewof marketTable") return new Inspector(document.querySelector("#observablehq-viewof-marketTable-71581602"));
   return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
 });
@@ -71,7 +76,8 @@ document.getElementById("synod").addEventListener("click",()=>{
     force:true,
     table:true,
     stacked:true,
-    map:true
+    map:true,
+    market:true
   }
   
   const forceBtn = document.getElementById("affilForceBtn");
@@ -105,6 +111,20 @@ document.getElementById("synod").addEventListener("click",()=>{
     }
   })
 
+     const marketBtn = document.getElementById("marketBtn");
+   const marketDiv = document.getElementById("marketDiv");
+  
+  marketBtn.addEventListener("click",()=>{
+    if (visibility.market){
+      marketDiv.style.display="none";
+      visibility.market=false;
+      marketBtn.style.opacity=.4;
+    }else{
+      marketDiv.style.display="block";
+      visibility.market=true;
+      marketBtn.style.opacity=1;
+    }
+  })
   
    const stackedBtn = document.getElementById("stackedBtn");
    const stackedDiv = document.getElementById("affilStacked");
