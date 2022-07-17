@@ -18,6 +18,10 @@
    <div id="affilForce" class="cell">
     <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
      </div>
+     <div id="territory" class="cell">
+    <div id="observablehq-territory-9f356331">Select a wallet to display territory</div>
+       <div id="observablehq-viewof-gl-9f356331"></div>
+     </div>
  <div id="ownerTable" class="cell">
  <div id="observablehq-viewof-search-9c49a5ef"></div>
 <div id="observablehq-viewof-mainTable-9c49a5ef">Loading owner table...</div>
@@ -39,7 +43,10 @@ new Runtime().module(define, name => {
   if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-9c49a5ef"));
   if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-9c49a5ef"));
   if (name === "force") return new Inspector(document.querySelector("#observablehq-force-9c49a5ef"));
-  return ["nodes","links"].includes(name);
+  if (name === "territory") return new Inspector(document.querySelector("#observablehq-territory-9f356331"));
+  if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-9f356331"));
+  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
+  
 });
 
   //open docs
