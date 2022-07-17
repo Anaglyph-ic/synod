@@ -31,6 +31,9 @@
       </div>
 
   <div id="colright">
+     <div id="tokenTooltip" class="cell">
+       <div id="observablehq-tokenTooltip-2dce2ada">Click on a token to display its metadata.</div>
+     </div>
      <div id="affilStacked" class="cell">
        <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
      </div>
@@ -47,6 +50,7 @@ new Runtime().module(define, name => {
   if (name === "force") return new Inspector(document.querySelector("#observablehq-force-9c49a5ef"));
   if (name === "territory") return new Inspector(document.querySelector("#observablehq-territory-9f356331"));
   if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-9f356331"));
+  if (name === "tokenTooltip") return new Inspector(document.querySelector("#observablehq-tokenTooltip-2dce2ada"));
   return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
 });
