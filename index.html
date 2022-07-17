@@ -10,6 +10,7 @@
   <div id="menu">
   <div id="synod">SYNOD<br>大会</div>
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Web<br>网络</div></div>
+     <div id="mapBtn"  class="cell btn"><div class="hovbut">Map<br>地图</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>名单</div></div>
     <div id="stackedBtn"  class="cell btn"><div class="hovbut">Stack<br>堆栈</div></div>
     <div id="docBtn"  class="cell btn"><div class="hovbut">Docs<br>文档</div></div>
@@ -18,7 +19,7 @@
    <div id="affilForce" class="cell">
     <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
      </div>
-     <div id="territory" class="cell">
+     <div id="mapDiv" class="cell">
   
        <div id="observablehq-viewof-gl-9f356331"></div>
          <div id="observablehq-territory-9f356331">Select a wallet to display territory</div>
@@ -66,6 +67,7 @@ document.getElementById("synod").addEventListener("click",()=>{
     force:true,
     table:true,
     stacked:true,
+    map:true
   }
   
   const forceBtn = document.getElementById("affilForceBtn");
@@ -112,6 +114,21 @@ document.getElementById("synod").addEventListener("click",()=>{
       stackedDiv.style.display="block";
       visibility.stacked=true;
       stackedBtn.style.opacity=1;
+    }
+  })
+  
+     const mapBtn = document.getElementById("mapBtn");
+   const mapDiv = document.getElementById("mapDiv");
+  
+  mapBtn.addEventListener("click",()=>{
+    if (visibility.stacked){
+      mapDiv.style.display="none";
+      visibility.map=false;
+      mapBtn.style.opacity=.4;
+    }else{
+      mapDiv.style.display="block";
+      visibility.map=true;
+      mapBtn.style.opacity=1;
     }
   })
   
