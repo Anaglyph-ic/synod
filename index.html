@@ -38,6 +38,9 @@
      <div id="tokenTooltip" class="cell">
        <div id="observablehq-tokenTooltip-2dce2ada">Click on a token to display its metadata.</div>
      </div>
+         <div id="walletTooltip" class="cell">
+       <div id="observablehq-personalTooltip-2b179d22">Click on a wallet to display its information.</div>
+     </div>
      <div id="affilStacked" class="cell">
        <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
      </div>
@@ -56,6 +59,7 @@ new Runtime().module(define, name => {
   if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-9f356331"));
   if (name === "tokenTooltip") return new Inspector(document.querySelector("#observablehq-tokenTooltip-2dce2ada"));
    if (name === "viewof marketTable") return new Inspector(document.querySelector("#observablehq-viewof-marketTable-71581602"));
+   if (name === "personalTooltip") return new Inspector(document.querySelector("#observablehq-personalTooltip-2b179d22"));
   return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
 });
