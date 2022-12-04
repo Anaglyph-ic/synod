@@ -23,6 +23,10 @@
     <div id="docBtn"  class="cell btn"><div class="hovbut">Docs<br>文档</div></div>
   </div>
   <div id="content">
+       <div id="status" class="cell">
+    <div id="observablehq-statusDiv-aac9417b"></div>
+     </div>
+
    <div id="affilForce" class="cell">
     <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
      </div>
@@ -38,8 +42,11 @@
     <div id="marketDiv" class="cell">
 <div id="observablehq-viewof-marketTable-71581602">Loading market table...</div>
   </div>
+     <div id="blockTable" class="cell">
+ <div id="observablehq-viewof-blocksearch-aac9417b"></div>
+<div id="observablehq-viewof-blockTable-aac9417b">Loading owner table...</div>
+  </div>
       </div>
-
   <div id="colright">
      <div id="tokenTooltip" class="cell">
        <div id="observablehq-tokenTooltip-2dce2ada">Click on a token to display its metadata.</div>
@@ -66,6 +73,9 @@ new Runtime().module(define, name => {
   if (name === "tokenTooltip") return new Inspector(document.querySelector("#observablehq-tokenTooltip-2dce2ada"));
    if (name === "viewof marketTable") return new Inspector(document.querySelector("#observablehq-viewof-marketTable-71581602"));
    if (name === "personalTooltip") return new Inspector(document.querySelector("#observablehq-personalTooltip-2b179d22"));
+  if (name === "statusDiv") return new Inspector(document.querySelector("#observablehq-statusDiv-aac9417b"));
+  if (name === "viewof blocksearch") return new Inspector(document.querySelector("#observablehq-viewof-blocksearch-aac9417b"));
+  if (name === "viewof blockTable") return new Inspector(document.querySelector("#observablehq-viewof-blockTable-aac9417b"));
   return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
 });
