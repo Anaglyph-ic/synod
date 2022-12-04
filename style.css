@@ -81,4 +81,7 @@ td{
   list-style-type: none !important;
 }
 
+table{
+  width:100%;
+}
 
