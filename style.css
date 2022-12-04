@@ -92,3 +92,7 @@ color:hotpink;
 a:visited{
   color:darkred;
 }
+
+.invisible{
+  display:none;
+}
