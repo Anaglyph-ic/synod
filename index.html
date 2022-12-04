@@ -55,6 +55,9 @@
      </div>
   </div>
   
+  <div id="observablehq-scroll-9a99a8ae" class="invisible"></div>
+  
+  
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
@@ -70,6 +73,8 @@ new Runtime().module(define, name => {
   if (name === "statusDiv") return new Inspector(document.querySelector("#observablehq-statusDiv-aac9417b"));
   if (name === "viewof blocksearch") return new Inspector(document.querySelector("#observablehq-viewof-blocksearch-aac9417b"));
   if (name === "viewof blockTable") return new Inspector(document.querySelector("#observablehq-viewof-blockTable-aac9417b"));
+  if (name === "scroll") return new Inspector(document.querySelector("#observablehq-scroll-9a99a8ae"));
+});
   return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
 });
