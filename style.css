@@ -85,3 +85,10 @@ table{
   width:100%;
 }
 
+link{
+color:hotpink;
+}
+
+link:visited{
+  color:darkred;
+}
