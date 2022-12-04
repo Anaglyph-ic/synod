@@ -16,11 +16,12 @@
   <div id="menu">
   <div id="synod">SYNOD<br>大会</div>
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Web<br>网络</div></div>
-     <div id="mapBtn"  class="cell btn"><div class="hovbut">Map<br>地图</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>名单</div></div>
         <div id="marketBtn"  class="cell btn"><div class="hovbut">Market<br>市场</div></div>
+             <div id="blockBtn"  class="cell btn"><div class="hovbut">Blocks<br>区块</div></div>
     <div id="stackedBtn"  class="cell btn"><div class="hovbut">Stack<br>堆栈</div></div>
     <div id="docBtn"  class="cell btn"><div class="hovbut">Docs<br>文档</div></div>
+
   </div>
   <div id="content">
        <div id="status" class="cell">
@@ -30,12 +31,7 @@
    <div id="affilForce" class="cell">
     <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
      </div>
-     <div id="mapDiv" class="cell">
-  
-       <div id="observablehq-viewof-gl-9f356331"></div>
-         <div id="observablehq-territory-9f356331">Select a wallet to display territory</div>
-     </div>
- <div id="ownerTable" class="cell">
+    <div id="ownerTable" class="cell">
  <div id="observablehq-viewof-search-9c49a5ef"></div>
 <div id="observablehq-viewof-mainTable-9c49a5ef">Loading owner table...</div>
   </div>
@@ -68,8 +64,6 @@ new Runtime().module(define, name => {
   if (name === "viewof search") return new Inspector(document.querySelector("#observablehq-viewof-search-9c49a5ef"));
   if (name === "viewof mainTable") return new Inspector(document.querySelector("#observablehq-viewof-mainTable-9c49a5ef"));
   if (name === "force") return new Inspector(document.querySelector("#observablehq-force-9c49a5ef"));
-  if (name === "territory") return new Inspector(document.querySelector("#observablehq-territory-9f356331"));
-  if (name === "viewof gl") return new Inspector(document.querySelector("#observablehq-viewof-gl-9f356331"));
   if (name === "tokenTooltip") return new Inspector(document.querySelector("#observablehq-tokenTooltip-2dce2ada"));
    if (name === "viewof marketTable") return new Inspector(document.querySelector("#observablehq-viewof-marketTable-71581602"));
    if (name === "personalTooltip") return new Inspector(document.querySelector("#observablehq-personalTooltip-2b179d22"));
@@ -97,7 +91,8 @@ document.getElementById("synod").addEventListener("click",()=>{
     table:true,
     stacked:true,
     map:true,
-    market:true
+    market:true,
+    block:true
   }
   
   const forceBtn = document.getElementById("affilForceBtn");
@@ -115,9 +110,26 @@ document.getElementById("synod").addEventListener("click",()=>{
     }
   })
   
+     const blockBtn = document.getElementById("blockBtn");
+    const blockDiv = document.getElementById("blockTable");
+
+  
+    blockBtn.addEventListener("click",()=>{
+    if (visibility.table){
+      blockDiv.style.display="none";
+      visibility.block=false;
+      blockBtn.style.opacity=.4;
+    }else{
+      blockDiv.style.display="block";
+      visibility.block=true;
+      blockBtn.style.opacity=1;
+    }
+  })
+
   
    const ownerTableBtn = document.getElementById("ownerTableBtn");
     const tableDiv = document.getElementById("ownerTable");
+  
   
   ownerTableBtn.addEventListener("click",()=>{
     if (visibility.table){
