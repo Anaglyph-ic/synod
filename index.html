@@ -56,6 +56,8 @@
   </div>
   
   <div id="observablehq-scroll-9a99a8ae" class="invisible"></div>
+  <div id="observablehq-sentinel-081975a4" class="invisible"></div>
+
   
   
 
@@ -74,6 +76,8 @@ new Runtime().module(define, name => {
   if (name === "viewof blocksearch") return new Inspector(document.querySelector("#observablehq-viewof-blocksearch-aac9417b"));
   if (name === "viewof blockTable") return new Inspector(document.querySelector("#observablehq-viewof-blockTable-aac9417b"));
   if (name === "scroll") return new Inspector(document.querySelector("#observablehq-scroll-9a99a8ae"));
+    if (name === "sentinel") return new Inspector(document.querySelector("#observablehq-sentinel-081975a4"));
+
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
