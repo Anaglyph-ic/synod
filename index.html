@@ -15,6 +15,7 @@
 <body>
   <div id="menu">
   <div id="synod">SYNOD<br>大会</div>
+       <div id="statusBtn"  class="cell btn"><div class="hovbut">Logs<br>日志</div></div>
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Web<br>网络</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>名单</div></div>
         <div id="marketBtn"  class="cell btn"><div class="hovbut">Market<br>市场</div></div>
@@ -36,6 +37,8 @@
 <div id="observablehq-viewof-mainTable-9c49a5ef">Loading owner table...</div>
   </div>
     <div id="marketDiv" class="cell">
+<div id="observablehq-gentkGPlineGraphchart-953602d8"></div>
+      <div id="observablehq-viewof-gentkGPlineGraphfocus-953602d8"></div>
 <div id="observablehq-viewof-marketTable-71581602">Loading market table...</div>
   </div>
      <div id="blockTable" class="cell">
@@ -77,6 +80,8 @@ new Runtime().module(define, name => {
   if (name === "viewof blockTable") return new Inspector(document.querySelector("#observablehq-viewof-blockTable-aac9417b"));
   if (name === "scroll") return new Inspector(document.querySelector("#observablehq-scroll-9a99a8ae"));
     if (name === "sentinel") return new Inspector(document.querySelector("#observablehq-sentinel-081975a4"));
+  if (name === "gentkGPlineGraphchart") return new Inspector(document.querySelector("#observablehq-gentkGPlineGraphchart-953602d8"));
+  if (name === "viewof gentkGPlineGraphfocus") return new Inspector(document.querySelector("#observablehq-viewof-gentkGPlineGraphfocus-953602d8"));
 
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
@@ -96,13 +101,31 @@ document.getElementById("synod").addEventListener("click",()=>{
   
   // Manage Buttons
   const visibility = {
+    status:true,
     force:true,
     table:true,
     stacked:true,
     map:true,
     market:true,
-    block:true
+    block:true,
   }
+  
+  
+  
+    const statusBtn = document.getElementById("statusBtn");
+  const statusDiv = document.getElementById("status");
+  
+  statusBtn.addEventListener("click",()=>{
+    if (visibility.status){
+      statusDiv.style.display="none";
+      visibility.status=false;
+      statusBtn.style.opacity=.4;
+    }else{
+      statusDiv.style.display="block";
+      visibility.status=true;
+      statusBtn.style.opacity=1;
+    }
+  })
   
   const forceBtn = document.getElementById("affilForceBtn");
   const forceDiv = document.getElementById("affilForce");
