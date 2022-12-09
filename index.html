@@ -55,8 +55,12 @@
        <div id="observablehq-personalTooltip-2b179d22">Click on a wallet to display its information.</div>
      </div>
      <div id="affilStacked" class="cell">
-       <div id="observablehq-chartStacked-9c49a5ef">Loading stacked affiliation chart...</div>
+       <div id="observablehq-chartStacked-9c49a5ef">Loading affiliation charts...</div>
+       <div id="observablehq-viewof-affilTable-aa2283e5"></div>
      </div>
+    
+    
+    
   </div>
   
   <div id="observablehq-scroll-9a99a8ae" class="invisible"></div>
@@ -85,8 +89,7 @@ new Runtime().module(define, name => {
   if (name === "viewof gentkGPlineGraphfocus") return new Inspector(document.querySelector("#observablehq-viewof-gentkGPlineGraphfocus-953602d8"));
     if (name === "gentkGPlineUpdate") return new Inspector(document.querySelector("#observablehq-gentkGPlineUpdate-7dcf9901"));
     if (name === "userNumTok") return new Inspector(document.querySelector("#observablehq-userNumTok-cd218ee4"));
-
-
+  if (name === "viewof affilTable") return new Inspector(document.querySelector("#observablehq-viewof-affilTable-aa2283e5"));
 
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
