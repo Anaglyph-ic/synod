@@ -28,6 +28,10 @@
        <div id="status" class="cell">
     <div id="observablehq-statusDiv-aac9417b"></div>
      </div>
+    
+      <div id="messages" class="cell">
+    <div id="observablehq-messages-61c8f795"></div>
+     </div>
 
    <div id="affilForce" class="cell">
     <div id="observablehq-force-9c49a5ef">Loading force graph...</div>
@@ -90,6 +94,7 @@ new Runtime().module(define, name => {
     if (name === "gentkGPlineUpdate") return new Inspector(document.querySelector("#observablehq-gentkGPlineUpdate-7dcf9901"));
     if (name === "userNumTok") return new Inspector(document.querySelector("#observablehq-userNumTok-cd218ee4"));
   if (name === "viewof affilTable") return new Inspector(document.querySelector("#observablehq-viewof-affilTable-aa2283e5"));
+   if (name === "messages") return new Inspector(document.querySelector("#observablehq-messages-61c8f795"));
 
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
