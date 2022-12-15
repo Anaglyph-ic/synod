@@ -16,6 +16,7 @@
   <div id="menu">
   <div id="synod">SYNOD<br>大会</div>
        <div id="statusBtn"  class="cell btn"><div class="hovbut">Logs<br>日志</div></div>
+       <div id="messageBtn"  class="cell btn"><div class="hovbut">SMS<br>短信</div></div>
    <div id="affilForceBtn"  class="cell btn"><div class="hovbut">Web<br>网络</div></div>
     <div id="ownerTableBtn"  class="cell btn"><div class="hovbut">Table<br>名单</div></div>
         <div id="marketBtn"  class="cell btn"><div class="hovbut">Market<br>市场</div></div>
@@ -121,8 +122,23 @@ document.getElementById("synod").addEventListener("click",()=>{
     map:true,
     market:true,
     block:true,
+    sms:true
   }
   
+  const messageBtn = document.getElementById("messageBtn");
+  const messagesDiv = document.getElementById("messages");
+  
+  messageBtn.addEventListener("click",()=>{
+    if (visibility.sms){
+      messagesDiv.style.display="none";
+      visibility.sms=false;
+      messageBtn.style.opacity=.4;
+    }else{
+      messagesDiv.style.display="block";
+      visibility.sms=true;
+      messageBtn.style.opacity=1;
+    }
+  })
   
   
     const statusBtn = document.getElementById("statusBtn");
