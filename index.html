@@ -37,9 +37,18 @@
 
   </div>
   <div id="content">
+
+    
+
+    
        <div id="status" class="cell">
     <div id="observablehq-statusDiv-aac9417b">Loading status updates...</div>
      </div>
+
+        <div id="multiuser" class="cell">
+    <div id="observablehq-viewof-multitable-8edba8e2">Loading multi-user status...</div>
+     </div>
+
     
       <div id="messages" class="cell">
     <div id="observablehq-messages-61c8f795">Loading short messages...</div>
@@ -107,7 +116,7 @@ new Runtime().module(define, name => {
     if (name === "userNumTok") return new Inspector(document.querySelector("#observablehq-userNumTok-cd218ee4"));
   if (name === "viewof affilTable") return new Inspector(document.querySelector("#observablehq-viewof-affilTable-aa2283e5"));
    if (name === "messages") return new Inspector(document.querySelector("#observablehq-messages-61c8f795"));
-
+if (name === "viewof multitable") return new Inspector(document.querySelector("#observablehq-viewof-multitable-8edba8e2"));
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
