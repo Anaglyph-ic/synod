@@ -38,13 +38,13 @@
   </div>
   <div id="content">
 
-    
-
-    
        <div id="status" class="cell">
     <div id="observablehq-statusDiv-aac9417b">Loading status updates...</div>
      </div>
 
+    <div id="status" class="cell">
+    <div id="observablehq-multiuser-b76b633c">Loading multiuser updates...</div>
+     </div>
         
 
     
@@ -115,6 +115,7 @@ new Runtime().module(define, name => {
   if (name === "viewof affilTable") return new Inspector(document.querySelector("#observablehq-viewof-affilTable-aa2283e5"));
    if (name === "messages") return new Inspector(document.querySelector("#observablehq-messages-61c8f795"));
 if (name === "viewof multitable") return new Inspector(document.querySelector("#observablehq-viewof-multitable-8edba8e2"));
+   if (name === "multiuser") return new Inspector(document.querySelector("#observablehq-multiuser-b76b633c"));
 });
 //  return ["nodes","links","fragmentShader","program","draw","vertexShader","vertexBuffer"].includes(name);
   
